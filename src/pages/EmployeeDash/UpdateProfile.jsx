@@ -76,7 +76,7 @@ function UpdateProfile() {
                     ...FormData,
                     uid: auth.currentUser.uid,
                 });
-                console.log("Document written with ID: ", docRef.id);
+                // console.log("Document written with ID: ", docRef.id);
                 toast.success("Details Updated Successfully!");
             } else {
                 // If document found, update the existing document
