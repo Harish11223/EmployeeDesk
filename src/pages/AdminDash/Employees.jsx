@@ -72,7 +72,7 @@ function Employees() {
     (item.employmentType && item.employmentType.toLowerCase().includes(searchTerm.toLowerCase()))
   );
 
-  console.log("Filtered data:", filteredData); // Log filtered data
+  // console.log("Filtered data:", filteredData); // Log filtered data
 
   return (
     <>
