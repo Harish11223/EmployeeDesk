@@ -36,7 +36,7 @@ const Login = () => {
         }
 
         try {
-            console.log(email);
+            // console.log(email);
             const q = query(
                 collection(firestore, "Admin"),
                 where("email", "==", email)
@@ -44,7 +44,7 @@ const Login = () => {
 
             console.log("Checking user in Admin collection");
             const querySnapshot = await getDocs(q);
-            console.log("Query snapshot:", querySnapshot);
+            // console.log("Query snapshot:", querySnapshot);
 
             if (querySnapshot.empty) {
                 toast.error("Admin doesn't exist or not an admin");
@@ -55,7 +55,7 @@ const Login = () => {
                 signInWithEmailAndPassword(auth, email, password)
                     .then((userCredentials) => {
                         const user = userCredentials.user;
-                        console.log("Signed in user:", user);
+                        // console.log("Signed in user:", user);
                         toast.success("Signing In");
                         Navigate("/admindash");
                     })
@@ -93,7 +93,7 @@ const Login = () => {
         }
 
         try {
-            console.log(email);
+            // console.log(email);
             const q = query(
                 collection(firestore, "Employees"),
                 where("email", "==", email)
@@ -101,7 +101,7 @@ const Login = () => {
 
             console.log("Checking user in Employees collection");
             const querySnapshot = await getDocs(q);
-            console.log("Query snapshot:", querySnapshot);
+            // console.log("Query snapshot:", querySnapshot);
 
             if (querySnapshot.empty) {
                 toast.error("Employee doesn't exist or not an employee");
@@ -112,7 +112,7 @@ const Login = () => {
                 signInWithEmailAndPassword(auth, email, password)
                     .then((userCredentials) => {
                         const user = userCredentials.user;
-                        console.log("Signed in user:", user);
+                        // console.log("Signed in user:", user);
                         toast.success("Logging In");
                         Navigate("/employeedash");
                     })
